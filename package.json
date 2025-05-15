@@ -1,0 +1,20 @@
+{
+  "name": "create-javascript-nodejs-rest-api",
+  "version": "1.0.0",
+  "description": "create-javascript-nodejs-rest-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrebianco-net/create-javascript-nodejs-rest-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrebianco-net/create-javascript-nodejs-rest-api/issues"
+  },
+  "homepage": "https://github.com/andrebianco-net/create-javascript-nodejs-rest-api#readme"
+}
