@@ -1,24 +1,41 @@
 import movieService from '../services/movieService.js'
 
 
-const getAllMovies = (req, res, next) => {
+const getAllMovies = async (req, res, next) => {
     
     try {
-
-        const error = new Error('Erro ao buscar filmes');
-        error.status = 500;
-        throw error;
-
+        
+        const movies = await movieService.getAllMovies();
         
         res.status(200).json({
             sucess: true,
-            result: {}
-        })
-
-    } catch (err) {
-        next(err);
+            result: movies
+        });
+        
+    } catch (e) {        
+        const error = new Error('Erro ao buscar filmes');
+        error.status = 500;
+        
+        next(error);
     }
 
 };
 
-export default { getAllMovies };
+const getAllProducersRanking = async (req, res, next) => {
+    
+    try {
+        
+        const movies = await movieService.getAllProducersRanking();
+        
+        res.status(200).json(movies);
+        
+    } catch (e) {        
+        const error = new Error('Erro ao buscar produtores');
+        error.status = 500;
+        
+        next(error);
+    }
+
+};
+
+export default { getAllMovies, getAllProducersRanking };

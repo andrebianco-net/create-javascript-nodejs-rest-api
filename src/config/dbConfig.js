@@ -1,12 +1,8 @@
 import datastore from 'nedb-promises';
 
 
-const DBConfig = {
+const movies = datastore.create({
+    inMemoryOnly: true
+});
 
-    movies: datastore.create(
-        { inMemoryOnly: true }
-    ),
-
-};
-
-export default DBConfig;
+export default movies;

@@ -19,6 +19,6 @@ app.use(errorHandler);
 app.use(express.json());
 
 // Load data
-await moviesService.loadData(app);
+await moviesService.importDataCSV();
 
 export default app;
