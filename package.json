@@ -2,7 +2,8 @@
   "name": "create-javascript-nodejs-rest-api",
   "version": "1.0.0",
   "description": "create-javascript-nodejs-rest-api",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/andrebianco-net/create-javascript-nodejs-rest-api/issues"
   },
-  "homepage": "https://github.com/andrebianco-net/create-javascript-nodejs-rest-api#readme"
+  "homepage": "https://github.com/andrebianco-net/create-javascript-nodejs-rest-api#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nedb-promises": "^6.2.3"
+  }
 }

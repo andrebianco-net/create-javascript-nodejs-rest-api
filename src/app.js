@@ -1,8 +1,19 @@
-const express = require('express');
+import express from 'express';
+import loggerMiddleware from './middlewares/loggerMiddleware.js';
+import moviesService from './services/movieService.js';
+import movieRoutes from './routes/movieRoutes.js';
+
+
 const app = express();
-const movieRoutes = require('./routes/movie.routes');
 
+// Global middleware
+app.use(loggerMiddleware);
+
+// Body parser
 app.use(express.json());
-app.use('/api/movies', movieRoutes);
 
-module.exports = app;
+// Routes
+const { VERSION_API } = process.env;
+app.use(`/api/${VERSION_API}/movies`, movieRoutes);
+
+export default app;
