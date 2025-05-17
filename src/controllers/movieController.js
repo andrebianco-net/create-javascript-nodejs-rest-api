@@ -8,7 +8,7 @@ const getAllMovies = async (req, res, next) => {
         const movies = await movieService.getAllMovies();
         
         res.status(200).json({
-            sucess: true,
+            success: true,
             result: movies
         });
         
