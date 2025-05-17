@@ -1,21 +1,24 @@
 import movieService from '../services/movieService.js'
 
 
-const getAllMovies = async (req, res) => {
-
+export const getAllMovies = (req, res, next) => {
+    
     try {
-   
-        
-        
 
-        res.status(200).json(movies);
+        const error = new Error('Erro ao buscar filmes');
+        error.status = 500;
+        throw error;
+
+        
+        res.status(200).json({
+            sucess: true,
+            result: {}
+        })
 
     } catch (err) {
-      
-        res.status(500).json({ message: err.message });
-
+        next(err);
     }
 
-};  
+};
 
 export default { getAllMovies };
