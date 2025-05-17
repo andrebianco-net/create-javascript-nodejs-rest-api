@@ -18,4 +18,7 @@ app.use(errorHandler);
 // Body parser
 app.use(express.json());
 
+// Load data
+await moviesService.loadData(app);
+
 export default app;

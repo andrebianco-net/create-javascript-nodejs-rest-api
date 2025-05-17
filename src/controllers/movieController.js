@@ -1,7 +1,7 @@
 import movieService from '../services/movieService.js'
 
 
-export const getAllMovies = (req, res, next) => {
+const getAllMovies = (req, res, next) => {
     
     try {
 

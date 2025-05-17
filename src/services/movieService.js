@@ -1,8 +1,11 @@
 import moviesModel from '../models/movieModel.js';
 import importCSV from '../utils/importCSV.js';
 
-const MoviesService = {
 
-};
+const loadData = async (app) => {
+    
+    app.data = await importCSV.loadData('../../data/movielist.csv');
 
-export default MoviesService;
+}
+
+export default { loadData };
