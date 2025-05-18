@@ -3,7 +3,7 @@
 #### 1. Clonar o repositório do projeto
 
 ```bash
-$ git@github.com:andrebianco-net/create-javascript-nodejs-rest-api.git
+$ git clone git@github.com:andrebianco-net/create-javascript-nodejs-rest-api.git
 ```
 ```bash
 $ cd create-javascript-nodejs-rest-api
